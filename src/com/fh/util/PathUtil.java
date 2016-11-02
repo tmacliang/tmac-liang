@@ -24,6 +24,7 @@ public class PathUtil {
 	 *            图片类别，如：话题图片-topic、话题回复图片-reply、商家图片
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	public static String getPicturePath(String pathType, String pathCategory) {
 		String strResult = "";
 		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder

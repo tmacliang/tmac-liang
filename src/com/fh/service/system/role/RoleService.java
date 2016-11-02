@@ -17,18 +17,21 @@ public class RoleService{
 	private DaoSupport dao;
 	
 	
+	@SuppressWarnings("unchecked")
 	public List<Role> listAllERRoles() throws Exception {
 		return (List<Role>) dao.findForList("RoleMapper.listAllERRoles", null);
 		
 	}
 	
 	
+	@SuppressWarnings("unchecked")
 	public List<Role> listAllappERRoles() throws Exception {
 		return (List<Role>) dao.findForList("RoleMapper.listAllappERRoles", null);
 		
 	}
 	
 	
+	@SuppressWarnings("unchecked")
 	public List<Role> listAllRoles() throws Exception {
 		return (List<Role>) dao.findForList("RoleMapper.listAllRoles", null);
 		
@@ -45,12 +48,14 @@ public class RoleService{
 	}
 	
 	//列出此角色下的所有用户
+	@SuppressWarnings("unchecked")
 	public List<PageData> listAllUByRid(PageData pd) throws Exception {
 		return (List<PageData>) dao.findForList("RoleMapper.listAllUByRid", pd);
 		
 	}
 	
 	//列出此角色下的所有会员
+	@SuppressWarnings("unchecked")
 	public List<PageData> listAllAppUByRid(PageData pd) throws Exception {
 		return (List<PageData>) dao.findForList("RoleMapper.listAllAppUByRid", pd);
 		
@@ -59,17 +64,20 @@ public class RoleService{
 	/**
 	 * 列出此部门的所有下级
 	 */
+	@SuppressWarnings("unchecked")
 	public List<Role> listAllRolesByPId(PageData pd) throws Exception {
 		return (List<Role>) dao.findForList("RoleMapper.listAllRolesByPId", pd);
 		
 	}
 	
 	//列出K权限表里的数据 
+	@SuppressWarnings("unchecked")
 	public List<PageData> listAllkefu(PageData pd) throws Exception {
 		return (List<PageData>) dao.findForList("RoleMapper.listAllkefu", pd);
 	}
 	
 	//列出G权限表里的数据 
+	@SuppressWarnings("unchecked")
 	public List<PageData> listAllGysQX(PageData pd) throws Exception {
 		return (List<PageData>) dao.findForList("RoleMapper.listAllGysQX", pd);
 	}

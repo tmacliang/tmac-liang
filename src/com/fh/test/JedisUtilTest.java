@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 
 public class JedisUtilTest {
 	JedisPool pool;  
@@ -152,7 +151,8 @@ public class JedisUtilTest {
     }
     
     
-    public static void main(String args[]){  
+    @SuppressWarnings("resource")
+	public static void main(String args[]){  
         Jedis test = new Jedis("127.0.0.1",6379);  
         test.set("hw","hello world");  
         String hello = test.get("hw");  

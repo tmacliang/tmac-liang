@@ -16,6 +16,7 @@ import org.apache.http.annotation.ThreadSafe;
  * 
  * @author Brian Goetz and Tim Peierls
  */
+@SuppressWarnings("serial")
 @ThreadSafe
 public class StatelessFactorizer extends GenericServlet implements Servlet {
 

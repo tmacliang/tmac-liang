@@ -36,7 +36,8 @@ class ExampleUsage {
     private GrumpyBoundedBuffer<String> buffer;
     int SLEEP_GRANULARITY = 50;
 
-    void useBuffer() throws InterruptedException {
+    @SuppressWarnings("unused")
+	void useBuffer() throws InterruptedException {
         while (true) {
             try {
                 String item = buffer.take();
@@ -49,8 +50,10 @@ class ExampleUsage {
     }
 }
 
+@SuppressWarnings("serial")
 class BufferFullException extends RuntimeException {
 }
 
+@SuppressWarnings("serial")
 class BufferEmptyException extends RuntimeException {
 }

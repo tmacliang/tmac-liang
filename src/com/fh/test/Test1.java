@@ -3,6 +3,7 @@ package com.fh.test;
 import java.lang.reflect.Method;
 
 public class Test1 {
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException {
 		//int d = 9;
 		//change(d);

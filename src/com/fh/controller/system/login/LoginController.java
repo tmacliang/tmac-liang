@@ -155,6 +155,7 @@ public class LoginController extends BaseController {
 	/**
 	 * 访问系统首页
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value="/main/{changeMenu}")
 	public ModelAndView login_index(@PathVariable("changeMenu") String changeMenu){
 		ModelAndView mv = this.getModelAndView();

@@ -8,6 +8,7 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
+@SuppressWarnings("rawtypes")
 public class PageData extends HashMap implements Map{
 	
 	private static final long serialVersionUID = 1L;
@@ -15,6 +16,7 @@ public class PageData extends HashMap implements Map{
 	Map map = null;
 	HttpServletRequest request;
 	
+	@SuppressWarnings("unchecked")
 	public PageData(HttpServletRequest request){
 		this.request = request;
 		Map properties = request.getParameterMap();

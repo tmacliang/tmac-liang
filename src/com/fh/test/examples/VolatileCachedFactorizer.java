@@ -16,6 +16,7 @@ import org.apache.http.annotation.ThreadSafe;
  *
  * @author Brian Goetz and Tim Peierls
  */
+@SuppressWarnings("serial")
 @ThreadSafe
 public class VolatileCachedFactorizer extends GenericServlet implements Servlet {
     private volatile OneValueCache cache = new OneValueCache(null, null);

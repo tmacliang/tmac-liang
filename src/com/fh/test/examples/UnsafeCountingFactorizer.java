@@ -16,6 +16,7 @@ import org.apache.http.annotation.NotThreadSafe;
  *
  * @author Brian Goetz and Tim Peierls
  */
+@SuppressWarnings("serial")
 @NotThreadSafe
 public class UnsafeCountingFactorizer extends GenericServlet implements Servlet {
     private long count = 0;

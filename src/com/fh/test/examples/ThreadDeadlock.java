@@ -13,7 +13,8 @@ public class ThreadDeadlock {
     ExecutorService exec = Executors.newSingleThreadExecutor();
 
     public class LoadFileTask implements Callable<String> {
-        private final String fileName;
+        @SuppressWarnings("unused")
+		private final String fileName;
 
         public LoadFileTask(String fileName) {
             this.fileName = fileName;

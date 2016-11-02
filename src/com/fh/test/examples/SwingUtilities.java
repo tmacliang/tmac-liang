@@ -30,7 +30,8 @@ public class SwingUtilities {
         exec.execute(task);
     }
 
-    public static void invokeAndWait(Runnable task)
+    @SuppressWarnings("rawtypes")
+	public static void invokeAndWait(Runnable task)
             throws InterruptedException, InvocationTargetException {
         Future f = exec.submit(task);
         try {

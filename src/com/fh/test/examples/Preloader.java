@@ -42,4 +42,5 @@ public class Preloader {
     }
 }
 
+@SuppressWarnings("serial")
 class DataLoadException extends Exception { }

@@ -18,6 +18,7 @@ import org.apache.http.annotation.NotThreadSafe;
  * @author Brian Goetz and Tim Peierls
  */
 
+@SuppressWarnings("serial")
 @NotThreadSafe
 public class UnsafeCachingFactorizer extends GenericServlet implements Servlet {
     private final AtomicReference<BigInteger> lastNumber

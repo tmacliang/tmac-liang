@@ -63,6 +63,7 @@ public class InduceLockOrder {
         int getAcctNo();
     }
 
-    class InsufficientFundsException extends Exception {
+    @SuppressWarnings("serial")
+	class InsufficientFundsException extends Exception {
     }
 }

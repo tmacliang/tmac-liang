@@ -18,7 +18,8 @@ public class SemaphoreBoundedBuffer <E> {
     @GuardedBy("this") private final E[] items;
     @GuardedBy("this") private int putPosition = 0, takePosition = 0;
 
-    public SemaphoreBoundedBuffer(int capacity) {
+    @SuppressWarnings("unchecked")
+	public SemaphoreBoundedBuffer(int capacity) {
         if (capacity <= 0)
             throw new IllegalArgumentException();
         availableItems = new Semaphore(0);

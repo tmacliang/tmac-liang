@@ -11,7 +11,8 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ConnectException;
 import java.net.URL;
-import java.nio.charset.Charset;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,10 +21,9 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import net.sf.json.JSONObject;
 
 import org.marker.weixin.DefaultSession;
 import org.marker.weixin.HandleMessageAdapter;
@@ -31,30 +31,15 @@ import org.marker.weixin.MySecurity;
 import org.marker.weixin.msg.Data4Item;
 import org.marker.weixin.msg.Msg4ImageText;
 import org.marker.weixin.msg.Msg4Text;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.fh.controller.base.BaseController;
-
-
-
-
-
-
 import com.fh.util.Const;
 import com.fh.util.PageData;
 import com.fh.util.Tools;
 
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
-
-import javax.net.ssl.X509TrustManager;
+import net.sf.json.JSONObject;
 
 /**
  * 
@@ -137,7 +122,8 @@ public class WeixinController extends BaseController{
          final DefaultSession session = DefaultSession.newInstance();  
          session.addOnHandleMessageListener(new HandleMessageAdapter(){ 
             
-        	 @Override 
+        	 @SuppressWarnings("unused")
+			@Override 
              public void onTextMsg(Msg4Text msg) { 
                 System.out.println("收到微信消息："+msg.getContent()); 
                 Process p;

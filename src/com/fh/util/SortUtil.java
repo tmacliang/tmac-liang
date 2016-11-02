@@ -23,6 +23,7 @@ public class SortUtil {
 	 * @param param1   排序的参数名称
 	 * @param orderType 排序类型：正序-asc；倒序-desc  
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List sort(List sortList, String param1, String orderType){
 		Comparator mycmp1 = ComparableComparator.getInstance ();
 		if("desc".equals(orderType)){
@@ -45,6 +46,7 @@ public class SortUtil {
 	 * @param param2   排序的参数名称:排序参数
 	 * @param orderType 排序类型：正序-asc；倒序-desc  
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static List sortParam2(List sortList, String param1,String param2, String orderType){
 		Comparator mycmp1 = ComparableComparator.getInstance ();
 		Comparator mycmp2 = ComparableComparator.getInstance ();
@@ -62,6 +64,7 @@ public class SortUtil {
 		return sortList;
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes", "unused" })
 	public static List testMapSort(){
 		List sortList = new ArrayList();
 		

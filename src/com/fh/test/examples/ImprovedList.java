@@ -53,7 +53,8 @@ public class ImprovedList<T> implements List<T> {
         return list.toArray();
     }
 
-    public <T> T[] toArray(T[] a) {
+    @SuppressWarnings("hiding")
+	public <T> T[] toArray(T[] a) {
         return list.toArray(a);
     }
 

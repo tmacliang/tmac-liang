@@ -72,6 +72,7 @@ public class DynamicOrderDeadlock {
         }
     }
 
-    static class InsufficientFundsException extends Exception {
+    @SuppressWarnings("serial")
+	static class InsufficientFundsException extends Exception {
     }
 }

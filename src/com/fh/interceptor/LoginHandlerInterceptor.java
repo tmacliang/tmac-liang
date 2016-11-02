@@ -27,6 +27,7 @@ import com.fh.util.RightsHelper;
  */
 public class LoginHandlerInterceptor extends HandlerInterceptorAdapter{
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		// TODO Auto-generated method stub
@@ -40,12 +41,6 @@ public class LoginHandlerInterceptor extends HandlerInterceptorAdapter{
 			User user = (User)session.getAttribute(Const.SESSION_USER);
 			if(user!=null){
 				
-				//判断是否拥有当前点击菜单的权限（内部过滤,防止通过url进入跳过菜单权限）
-				/**
-				 * 根据点击的菜单的xxx.do去菜单中的URL去匹配，当匹配到了此菜单，判断是否有此菜单的权限，没有的话跳转到404页面
-				 * 根据按钮权限，授权按钮(当前点的菜单和角色中各按钮的权限匹对)
-				 */
-				Boolean b = true;
 				List<Menu> menuList = (List)session.getAttribute(Const.SESSION_allmenuList); //获取菜单列表
 				path = path.substring(1, path.length());
 				for(int i=0;i<menuList.size();i++){

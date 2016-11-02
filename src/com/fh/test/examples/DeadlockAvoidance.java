@@ -85,7 +85,8 @@ public class DeadlockAvoidance {
         }
     }
 
-    class InsufficientFundsException extends Exception {
+    @SuppressWarnings("serial")
+	class InsufficientFundsException extends Exception {
     }
 }
 

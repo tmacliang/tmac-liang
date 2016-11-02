@@ -66,13 +66,16 @@ public abstract class WebCrawler {
             this.url = url;
         }
 
-        private int count = 1;
+        @SuppressWarnings("unused")
+		private int count = 1;
 
-        boolean alreadyCrawled() {
+        @SuppressWarnings("unused")
+		boolean alreadyCrawled() {
             return seen.putIfAbsent(url, true) != null;
         }
 
-        void markUncrawled() {
+        @SuppressWarnings("unused")
+		void markUncrawled() {
             seen.remove(url);
             System.out.printf("marking %s uncrawled%n", url);
         }

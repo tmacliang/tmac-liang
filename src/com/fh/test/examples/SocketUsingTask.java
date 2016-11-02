@@ -39,7 +39,8 @@ public abstract class SocketUsingTask <T> implements CancellableTask<T> {
 
     public RunnableFuture<T> newTask() {
         return new FutureTask<T>(this) {
-            public boolean cancel(boolean mayInterruptIfRunning) {
+            @SuppressWarnings("finally")
+			public boolean cancel(boolean mayInterruptIfRunning) {
                 try {
                     SocketUsingTask.this.cancel();
                 } finally {

@@ -13,7 +13,8 @@ import java.net.Socket;
  */
 
 public class SingleThreadWebServer {
-    public static void main(String[] args) throws IOException {
+    @SuppressWarnings("resource")
+	public static void main(String[] args) throws IOException {
         ServerSocket socket = new ServerSocket(80);
         while (true) {
             Socket connection = socket.accept();

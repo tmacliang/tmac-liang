@@ -18,6 +18,7 @@ import org.apache.http.annotation.ThreadSafe;
  * @author Brian Goetz and Tim Peierls
  */
 
+@SuppressWarnings("serial")
 @ThreadSafe
 public class SynchronizedFactorizer extends GenericServlet implements Servlet {
     @GuardedBy("this") private BigInteger lastNumber;

@@ -28,7 +28,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.fh.controller.base.BaseController;
 import com.fh.entity.Page;
-import com.fh.entity.system.Menu;
 import com.fh.entity.system.Role;
 import com.fh.service.system.menu.MenuService;
 import com.fh.service.system.role.RoleService;
@@ -39,8 +38,8 @@ import com.fh.util.FileDownload;
 import com.fh.util.FileUpload;
 import com.fh.util.GetPinyin;
 import com.fh.util.ObjectExcelRead;
-import com.fh.util.PageData;
 import com.fh.util.ObjectExcelView;
+import com.fh.util.PageData;
 import com.fh.util.PathUtil;
 import com.fh.util.Tools;
 
@@ -419,6 +418,7 @@ public class UserController extends BaseController {
 	/**
 	 * 从EXCEL导入到数据库
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping(value="/readExcel")
 	public ModelAndView readExcel(
 			@RequestParam(value="excel",required=false) MultipartFile file
@@ -495,6 +495,7 @@ public class UserController extends BaseController {
 	
 
 	/* ===============================权限================================== */
+	@SuppressWarnings("unchecked")
 	public Map<String, String> getHC(){
 		Subject currentUser = SecurityUtils.getSubject();  //shiro管理的session
 		Session session = currentUser.getSession();

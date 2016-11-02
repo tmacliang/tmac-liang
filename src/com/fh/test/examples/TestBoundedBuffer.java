@@ -32,7 +32,8 @@ public class TestBoundedBuffer extends TestCase {
     void testTakeBlocksWhenEmpty() {
         final SemaphoreBoundedBuffer<Integer> bb = new SemaphoreBoundedBuffer<Integer>(10);
         Thread taker = new Thread() {
-            public void run() {
+            @SuppressWarnings("unused")
+			public void run() {
                 try {
                     int unused = bb.take();
                     fail(); // if we get here, it's an error

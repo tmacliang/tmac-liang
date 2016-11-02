@@ -23,7 +23,8 @@ public class OneShotLatch {
         sync.acquireSharedInterruptibly(0);
     }
 
-    private class Sync extends AbstractQueuedSynchronizer {
+    @SuppressWarnings("serial")
+	private class Sync extends AbstractQueuedSynchronizer {
         protected int tryAcquireShared(int ignored) {
             // Succeed if latch is open (state == 1), else fail
             return (getState() == 1) ? 1 : -1;

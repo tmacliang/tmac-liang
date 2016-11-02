@@ -100,6 +100,7 @@ public class DateUtil {
 			return false;
 		}
 	}
+	@SuppressWarnings("unused")
 	public static int getDiffYear(String startTime,String endTime) {
 		DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 		try {

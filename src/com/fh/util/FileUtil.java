@@ -72,6 +72,7 @@ public class FileUtil {
 	 * @param filePath //路径
 	 * @throws IOException
 	 */
+	@SuppressWarnings("resource")
 	public static byte[] getContent(String filePath) throws IOException {
 		File file = new File(filePath);
 		long fileSize = file.length();

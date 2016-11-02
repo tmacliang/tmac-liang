@@ -168,7 +168,8 @@ public class SimpleMailSender extends BaseController {
 	   }
     
     
-    public static void main(String[] args){   
+    @SuppressWarnings("unused")
+	public static void main(String[] args){   
         //这个类主要是设置邮件   
 	     MailSenderInfo mailInfo = new MailSenderInfo();    
 	     mailInfo.setMailServerHost("smtp.qq.com");    

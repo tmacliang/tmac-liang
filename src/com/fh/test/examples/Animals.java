@@ -56,7 +56,8 @@ public class Animals {
     }
 
     class AnimalPair {
-        private final Animal one, two;
+        @SuppressWarnings("unused")
+		private final Animal one, two;
 
         public AnimalPair(Animal one, Animal two) {
             this.one = one;

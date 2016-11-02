@@ -16,6 +16,7 @@ import org.apache.http.annotation.ThreadSafe;
  *
  * @author Brian Goetz and Tim Peierls
  */
+@SuppressWarnings("serial")
 @ThreadSafe
 public class Factorizer extends GenericServlet implements Servlet {
     private final Computable<BigInteger, BigInteger[]> c =

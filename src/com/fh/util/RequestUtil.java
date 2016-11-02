@@ -12,6 +12,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 public class RequestUtil {
 	
+	@SuppressWarnings({ "unused", "rawtypes" })
 	public static String getValue(){
 		
 		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();

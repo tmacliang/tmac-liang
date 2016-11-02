@@ -24,7 +24,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.fh.controller.base.BaseController;
 import com.fh.entity.Page;
-import com.fh.entity.system.Menu;
 import com.fh.entity.system.Role;
 import com.fh.service.system.appuser.AppuserService;
 import com.fh.service.system.role.RoleService;
@@ -370,6 +369,7 @@ public class AppuserController extends BaseController {
 	}
 	
 	/* ===============================权限================================== */
+	@SuppressWarnings("unchecked")
 	public Map<String, String> getHC(){
 		Subject currentUser = SecurityUtils.getSubject();  //shiro管理的session
 		Session session = currentUser.getSession();

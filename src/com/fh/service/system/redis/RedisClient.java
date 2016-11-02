@@ -74,7 +74,8 @@ public class RedisClient {
         shardedJedisPool = new ShardedJedisPool(config, shards); 
     } 
 
-    public void show() {     
+    @SuppressWarnings("deprecation")
+	public void show() {     
     	System.out.println("执行开始-------------------");
        // KeyOperate(); 
         //StringOperate(); 
@@ -87,7 +88,8 @@ public class RedisClient {
         System.out.println("执行结束-------------------");
     } 
 
-      private void KeyOperate() {
+      @SuppressWarnings("unused")
+	private void KeyOperate() {
     	  System.out.println("======================key=========================="); 
           // 清空数据 
           System.out.println("清空库中所有数据："+jedis.flushDB());
@@ -127,7 +129,8 @@ public class RedisClient {
            */
       }
 
-      private void StringOperate() {
+      @SuppressWarnings("unused")
+	private void StringOperate() {
     	  System.out.println("======================String_1=========================="); 
           // 清空数据 
           System.out.println("清空库中所有数据："+jedis.flushDB());
@@ -201,7 +204,8 @@ public class RedisClient {
           System.out.println("获取key302对应值中的子串："+shardedJedis.getrange("key302", 5, 7));    
       }
 
-      private void ListOperate() {
+      @SuppressWarnings("unused")
+	private void ListOperate() {
     	  System.out.println("======================list=========================="); 
           // 清空数据 
           System.out.println("清空库中所有数据："+jedis.flushDB()); 
