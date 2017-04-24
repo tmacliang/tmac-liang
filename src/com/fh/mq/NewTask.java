@@ -6,8 +6,13 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.MessageProperties;
 
 public class NewTask {
+<<<<<<< HEAD
 
   private static final String TASK_QUEUE_NAME = "task_queue";// ·12121声明队称123github123
+=======
+
+  private static final String TASK_QUEUE_NAME = "task_queue";// 开始声明队称123github123至结束
+>>>>>>> branch 'master' of https://github.com/tmacliang/wizard.git
 
   public static void main(String[] argv) throws Exception {
     ConnectionFactory factory = new ConnectionFactory();
