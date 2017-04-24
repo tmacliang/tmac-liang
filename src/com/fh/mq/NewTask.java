@@ -7,7 +7,7 @@ import com.rabbitmq.client.MessageProperties;
 
 public class NewTask {
 
-  private static final String TASK_QUEUE_NAME = "task_queue";// 声明队列名称123github123
+  private static final String TASK_QUEUE_NAME = "task_queue";// 声明队称123github123
 
   public static void main(String[] argv) throws Exception {
     ConnectionFactory factory = new ConnectionFactory();
